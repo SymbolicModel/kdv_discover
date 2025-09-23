@@ -1,10 +1,11 @@
 # Dataset Description: kdv_data_for_workshop.mat
 
-This dataset contains numerical data from the KdV equation. A working example with PySR is given in Test_KdV.py, but you are encouraged to write your own. 
+This dataset contains numerical data from the KdV equation. A working example with PySR is given in Test_KdV.py, but you are encouraged to write your own.
 
 ## Variables  
 
 ### u_mat (size: 32000 × 5)  
+
 - Each row corresponds to a point in space and time for a given case.  
 - Each column contains one of the following values:  
   1. u — solution value  
@@ -14,6 +15,7 @@ This dataset contains numerical data from the KdV equation. A working example wi
   5. uxxxx — fourth spatial derivative (∂⁴u/∂x⁴)  
 
 #### Structure
+
 - Data is organised sequentially over space, time, and cases.  
 - Dimensions:  
   - Space (N): 400 points  
@@ -39,6 +41,7 @@ Case 8
 ---
 
 ### u_tar (size: 32000 × 1)  
+
 - Contains the time derivative:  
   - ut — ∂u/∂t  
 - Follows the same row ordering as u_mat.  
@@ -46,6 +49,7 @@ Case 8
 ---
 
 ✅ In short:  
+
 - u_mat provides the state (u and spatial derivatives).  
 - u_tar provides the target (time derivative).  
 - Together, they represent spatio-temporal samples from 8 cases of the KdV equation.  
@@ -56,6 +60,6 @@ Case 8
 
 Think of the data as a 3D tensor:
 
-    [Space = 400] × [Time = 10] × [Cases = 8] = 32000 samples
+    [Cases = 8] × [Time = 10] × [Space = 400] = 32000 samples
 
 Each row in u_mat and u_tar corresponds to one slice of this tensor, flattened into a 2D matrix.
