@@ -4,6 +4,12 @@ This dataset contains numerical data from the KdV equation. A working example wi
 
 ## Variables  
 
+### u_only_mat_reshaped (size: 32000 × 5) 
+- only contains the u variable
+- First dimension is the number of cases (8)
+- The second dimension is the number of time snapshots (10)
+- The third dimension corresponds to the number of space points (400)
+
 ### u_mat (size: 32000 × 5)  
 
 - Each row corresponds to a point in space and time for a given case.  
@@ -13,6 +19,7 @@ This dataset contains numerical data from the KdV equation. A working example wi
   3. uxx — second spatial derivative (∂²u/∂x²)  
   4. uxxx — third spatial derivative (∂³u/∂x³)  
   5. uxxxx — fourth spatial derivative (∂⁴u/∂x⁴)  
+
 
 #### Structure
 
