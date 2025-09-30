@@ -1,3 +1,16 @@
+# Dataset Description: kdv_data_for_workshop_PySINDy.mat
+## Variables  
+### u_only_mat_reshaped (size: 50 x 4800) 
+- only contains the u variable
+- First dimension is the number of times snapshots (50)
+- The second dimension corresponds to the number of space points (4800)
+- 
+#### Structure
+- Data is organised sequentially over space, time and only for one case.  
+- Dimensions:  
+  - Space (N): 4800 points  
+  - Time (Nt): 50 snapshots  
+
 # Dataset Description: kdv_data_for_workshop.mat
 
 This dataset contains numerical data from the KdV equation. A working example with PySR is given in Test_KdV.py, but you are encouraged to write your own. 
