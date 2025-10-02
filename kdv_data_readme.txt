@@ -7,6 +7,8 @@ This dataset contains numerical data from the KdV equation.
 - Dimensions:  
   - Time (Nt): 51 snapshots  
   - Space (Nx): 401 points  
+
+- Overall shape: 401 x 51 = 20451 rows  
   
 ## Variables  
 
@@ -16,6 +18,20 @@ This dataset contains numerical data from the KdV equation.
 
 ### u (size: 51 x 401)
 - u = u( T, X )
+
+### u_x (size: 20451 × 5)  
+- Each row corresponds to a point in space and time for a given case.  
+- Each column contains one of the following values:  
+  1. u — solution value  
+  2. ux — first spatial derivative (∂u/∂x)  
+  3. uxx — second spatial derivative (∂²u/∂x²)  
+  4. uxxx — third spatial derivative (∂³u/∂x³)  
+  5. uxxxx — fourth spatial derivative (∂⁴u/∂x⁴)  
+
+### u_t (size: 20451 × 1)  
+- Contains the time derivative:  
+  - ut — ∂u/∂t  
+- Follows the same row ordering as u_x.  
 
 # Dataset Description: `kdv_data_for_workshop.mat`
 
